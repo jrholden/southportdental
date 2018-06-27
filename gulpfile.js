@@ -42,17 +42,28 @@ gulp.task('js', function() {
         .pipe(gulp.dest("src/js"))
         .pipe(browserSync.stream());
 });
+gulp.task('fonts', function() {
+    return gulp.src(['node_modules/fonts/**'])
+        .pipe(gulp.dest("src/fonts"))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('deploy', ['sass'], function () {
+    return gulp.src(['src/**'])
+        .pipe(gulp.dest('/xampp/htdocs/SouthportDental'))
+        .pipe(browserSync.stream());
+});
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['deploy'], function() {
 
     browserSync.init({
-        server: "./src"
+        server: "/xampp/htdocs/SouthportDental"
     });
 
-    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch(['src/**/*'], ['deploy']);
+    gulp.watch("src/**").on('change', browserSync.reload);
 });
 
 
-gulp.task('default', ['js','sass']);
+gulp.task('default', ['js','sass','fonts']);

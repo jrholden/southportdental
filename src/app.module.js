@@ -3,5 +3,8 @@
 angular.module('southportDental',[
     'ngRoute',
     'core',
-    'home'
+    'home',
+    'team',
+    'reviews',
+    'contact'
 ]);
