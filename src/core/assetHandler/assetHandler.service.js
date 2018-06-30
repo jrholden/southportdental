@@ -7,8 +7,9 @@ angular.module('core.assetHandler').factory('AssetHandler', ['$http','$q',
         let returnVal = {content: null};
 
         service.getSlidePaths = function () {
-            $http.get('assets/assetPaths.json').success(function (data){
-                returnVal.content = data.sliderImages;
+            $http.get('assets/assetPaths.json').then(function (data){
+                console.log(data.data);
+                returnVal.content = data.data.sliderImages;
             });
             return returnVal;
         };

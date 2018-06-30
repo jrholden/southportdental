@@ -26,8 +26,6 @@ angular.module('southportDental')
     ]).controller('HeaderController', [ '$scope', '$location',
     function HeaderController($scope, $location) {
         $scope.isActive = function (viewLocation) {
-            console.log(viewLocation === $location.path());
-
             return viewLocation === $location.path();
         };
     }

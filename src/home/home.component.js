@@ -9,7 +9,7 @@ angular.module('home').component('home', {
             console.log($scope.slides);
             $rootScope.$watch('slides', function (){
                 $scope.slides = ($rootScope.slides.content);
-                console.log($scope.slides);
+                console.log($rootScope.slides);
             });
         }
     ]
