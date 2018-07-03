@@ -1,31 +1,54 @@
 
 
+<div class="card" >
+    <div class="row">
+        <div class="card-body col-sm-5 col-md-5">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
 
-<div class="row">
-    <div class="col-md-5">
+    <div  id="carouselExampleIndicators" class="col-sm-7 col-md-7 carousel slide carousel-fade card-img-top" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li ng-repeat="slide in slides" data-target="#carouselExampleIndicators" data-slide-to="{{$index}}" ng-class="{active:!$index}"></li>
+        </ol>
+        <div class="carousel-inner" >
+            <div class="carousel-item " ng-class="{'active':!$index}" ng-repeat="slide in slides">
+                <div class="d-flex image-wrapper">
+                    <img class="d-flex align-items-center w-100" ng-src="{{slide}}" alt="First slide">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+<!--<div class="row">
+    <div class="col-sm-5 col-md-5">
 
     </div>
-<div  id="carouselExampleIndicators" class="col-md-7 carousel slide carousel-fade" data-ride="carousel">
+<div  id="carouselExampleIndicators" class="col-sm-7 col-md-7 carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         <li ng-repeat="slide in slides" data-target="#carouselExampleIndicators" data-slide-to="{{$index}}" ng-class="{active:!$index}"></li>
     </ol>
     <div class="carousel-inner" >
         <div class="carousel-item " ng-class="{'active':!$index}" ng-repeat="slide in slides">
-            <div class="image-wrapper">
-                <img class="d-block w-100" ng-src="{{slide}}" alt="First slide">
+            <div class="d-flex image-wrapper">
+                <img class="d-flex align-items-center w-100" ng-src="{{slide}}" alt="First slide">
             </div>
         </div>
     </div>
 </div>
-</div>
+</div>-->
 <div class="row">
-    <div class="col-sm-8 jumbotron jumbotron-fluid">
+    <div class="col-sm-6 col-md-7 col-lg-8 jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Fluid jumbotron</h1>
             <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         </div>
     </div>
-    <div class="col-sm-4  jumbotron jumbotron-fluid">
+    <div class="col-sm-6 col-md-5 col-lg-4 jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Dixk jumbotron</h1>
             <p class="lead">This is a modified jumbotron that occupies the kentire horizontal space of its parent.</p>

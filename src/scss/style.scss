@@ -12,7 +12,7 @@ $color3: rgba(255, 248, 244, 1);
 $color4: rgba(0, 52, 89, 1);
 $color5: rgba(0, 23, 31, 1);
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 765px) {
   #nav-brand {
     visibility: hidden;
     clear: both;
@@ -31,9 +31,6 @@ $color5: rgba(0, 23, 31, 1);
     color: white;
     font-size: 25px;
   }
-
-
-
   .navbar-nav > li > a[class="nav-link"] {
 
     padding-bottom: 0;
@@ -47,16 +44,55 @@ $color5: rgba(0, 23, 31, 1);
 
   }
   .image-wrapper {
-    max-height: 190px;
+    max-height: 35vh;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 760px) and (max-width: 1000px) {
   #navbar {
     padding-left: 5em;
-    margin-left: 5em;
+    margin-left: 0;
+  }
+  div[id="navbar"] {
+    border-top: 1px solid #ffffff1c;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  nav>div>button>i[class^="fa"] {
+    color: white;
+    font-size: 25px;
+  }
+  .navbar-nav > li {
+
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+
+  }
+
+  .image-wrapper {
+    max-height: 300px;
+    min-height:300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+@media (min-width: 1125px) {
+  .image-wrapper {
+    max-width: 800px;
+    max-height: 50vh;
+    min-height: 50vh;
+    margin-left: auto;
+  }
+
+}
+@media (min-width: 990px) {
+  #navbar {
+    margin-left: auto;
   }
   .navbar-nav > li {
     padding-right: 1em;
@@ -66,9 +102,9 @@ $color5: rgba(0, 23, 31, 1);
     text-align: center;
   }
   .image-wrapper {
-    max-height: 480px;
+    max-width: 800px;
+    max-height: 48vh ;
     margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -76,8 +112,12 @@ body {
   background: url("../assets/img/background.jpg");
 }
 
-body > .view-container div[class^="col"] {
+body > div >.view-container div[class^="col"] {
   padding: 0;
+}
+
+body > div >.view-container {
+  padding: 15px;
 }
 
 .navbar-wrapper {

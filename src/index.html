@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+    <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="fonts/css/all.css">
     <link rel="stylesheet" href="fonts/css/regular.css">
     <link rel="stylesheet" href="fonts/css/fontawesome.css">
     <link rel="stylesheet" href="fonts/css/svg-with-js.css">
     <link rel="stylesheet" href="fonts/css/v4-shims.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
@@ -22,17 +23,18 @@
     <nav class="navbar navbar-fixed-top navbar-expand-lg " ng-controller="HeaderController">
         <div class="container">
 
-                <a class="navbar-brand" href="#">
-                    <img class="nav-logo" src="assets/img/smilesLogo.png">
-                    <span id="nav-brand">Southport Dental</span>
-                </a>
-                <button type="button"  class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-align-justify"></i>
+            <a class="navbar-brand" href="#">
+                <img class="nav-logo" src="assets/img/smilesLogo.png">
+                <span id="nav-brand">Southport Dental</span>
+            </a>
+            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-align-justify"></i>
 
-                </button>
+            </button>
 
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <ul class="navbar-nav justify-content-end">
                     <li class="nav-item " ng-class="{ active: isActive('/home')}">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -50,14 +52,13 @@
             </div>
         </div>
     </nav>
-
 </div>
 
-<div class="view-container col-12">
-    <div ng-view class="view-frame"></div>
+<div style="background-color: rgba(255,255,255,0.45);min-height: 100vh">
+    <div class="view-container col-12">
+        <div ng-view class="view-frame"></div>
+    </div>
 </div>
-
-
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.min.js"></script>
 <script src="js/tether.min.js"></script>
