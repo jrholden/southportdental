@@ -1,3 +1,13 @@
+
+
+@import "variables";
+@import "mixins";
+@import "global";
+@import "buttons";
+@import "intro";
+@import "bootstrap-overrides";
+@import "about";
+@import "products";
 /* HSL */
 $color1: hsla(197%, 100%, 45%, 1);
 $color2: hsla(195%, 100%, 33%, 1);
@@ -110,6 +120,9 @@ $color5: rgba(0, 23, 31, 1);
 
 body {
   background: url("../assets/img/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 body > div >.view-container div[class^="col"] {

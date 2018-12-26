@@ -1,5 +1,10 @@
 {
-  "sliderImages": {
+  "slidePaths": {
+    "slide1": "assets/img/slide1.jpg",
+    "slide2": "assets/img/slide2.jpg",
+    "slide3": "assets/img/slide3.jpg"
+  },
+  "slideStrings":{
     "slide1": "assets/img/slide1.jpg",
     "slide2": "assets/img/slide2.jpg",
     "slide3": "assets/img/slide3.jpg"

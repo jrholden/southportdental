@@ -1,0 +1,84 @@
+body {
+  @include body-font;
+  background: linear-gradient(rgba(47, 23, 15, 0.65)), url('../img/bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+}
+
+p {
+  line-height: 2;
+}
+
+
+
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+
+  @include heading-font;
+  .site-heading-upper {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .site-heading-lower {
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 4rem;
+  }
+}
+.cta {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: fade-out($primary, 0.1);
+  .cta-inner {
+    position: relative;
+    padding: 2rem;
+    margin: 0.1rem;
+    background-color: fade-out($white, 0.15);
+    &:before {
+      border-radius: 0.5rem;
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      bottom: -0.5rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      border: 0.25rem solid fade-out($white, 0.15);
+    }
+  }
+}
+.page-section {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+}
+
+.bg-faded {
+  background-color: fade-out($white, 0.15);
+}

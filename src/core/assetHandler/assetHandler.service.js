@@ -7,9 +7,15 @@ angular.module('core.assetHandler').factory('AssetHandler', ['$http','$q',
         let returnVal = {content: null};
 
         service.getSlidePaths = function () {
-            $http.get('assets/assetPaths.json').then(function (data){
-                console.log(data.data);
-                returnVal.content = data.data.sliderImages;
+            $http.get('assets/assetPaths.json').then(function (file){
+                console.log(file.data.slidePaths);
+                returnVal.content = file.data.slidePaths;
+            });
+            return returnVal;
+        };
+        service.getSlideStrings = function () {
+            $http.get('assets/assetPaths.json').then(function (file){
+                returnVal.content = file.data.slideStrings;
             });
             return returnVal;
         };

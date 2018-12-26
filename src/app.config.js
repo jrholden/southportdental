@@ -3,8 +3,10 @@
 angular.module('southportDental')
 
     .run(function ($rootScope, AssetHandler) {
-        $rootScope.slides = AssetHandler.getSlidePaths();
+        $rootScope.slidePaths = (AssetHandler.getSlidePaths());
+        $rootScope.slideStrings = (AssetHandler.getSlideStrings());
     })
+
     .config(['$locationProvider', '$routeProvider',
 
         function config($locationProvider, $routeProvider) {
@@ -15,8 +17,7 @@ angular.module('southportDental')
                 template: '<home></home>'
             }).when('/contact', {
                 template: '<contact></contact>'
-            }).when('/testimonials', {
-                template: '<reviews></reviews>'
+            
             }).when('/team', {
                 template: '<team></team>'
             }).when('',{

@@ -5,12 +5,25 @@ angular.module('home').component('home', {
     controller: ['$scope', '$rootScope',
         function HomeController($scope, $rootScope) {
 
-            $scope.slides = false;
-            console.log($scope.slides);
-            $rootScope.$watch('slides', function (){
-                $scope.slides = ($rootScope.slides.content);
-                console.log($rootScope.slides);
+            $scope.slidePaths = false;
+            $scope.slideStrings = false;
+
+            $scope.index = 0;
+
+            $rootScope.$watch('slidePaths', function () {
+                $scope.slidePaths = ($rootScope.slidePaths.content);
             });
+            $rootScope.$watch('slideStrings', function () {
+                $scope.slideStrings = ($rootScope.slideStrings.content);
+            });
+
+            $scope.setSliderIndex = function (i){
+                console.log("Setting index to: "+ i);
+                console.log($scope.slidePaths);
+                console.log($scope.slideStrings);
+                $scope.index = i;
+            }
+
         }
     ]
 });
