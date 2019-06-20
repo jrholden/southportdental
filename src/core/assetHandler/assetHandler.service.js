@@ -8,7 +8,7 @@ angular.module('core.assetHandler').factory('AssetHandler', ['$http','$q',
 
         service.getSlidePaths = function () {
             $http.get('assets/assetPaths.json').then(function (file){
-                console.log(file.data.slidePaths);
+
                 returnVal.content = file.data.slidePaths;
             });
             return returnVal;
@@ -16,6 +16,12 @@ angular.module('core.assetHandler').factory('AssetHandler', ['$http','$q',
         service.getSlideStrings = function () {
             $http.get('assets/assetPaths.json').then(function (file){
                 returnVal.content = file.data.slideStrings;
+            });
+            return returnVal;
+        };
+        service.getTeamDetails = function () {
+            $http.get('assets/teamDetails.json').then(function (file){
+                returnVal.content = file.data.teamDetails;
             });
             return returnVal;
         };

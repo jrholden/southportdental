@@ -1,3 +1,35 @@
+
+
+
+
+
+<section ng-show="loadingDone" ng-repeat="person in teamDetails" class="page-section" ng-cloak>
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex mr-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">{{person.title}}</span>
+                        <span class="section-heading-lower">{{person.name}}</span>
+                    </h2>
+                </div>
+            </div>
+            <img ng-class="getSectionClass($index)" class="product-item-img mx-auto d-flex rounded img-fluid mb-lg-0" ng-src="{{person.imageUrl}}"
+                 alt="">
+            <div class="product-item-description d-flex ml-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">{{person.text1}}</p>
+                    <p class="mb-0"><br/>{{person.text2}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--
 <section class="page-section">
     <div class="container">
         <div class="product-item">
@@ -210,4 +242,4 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->

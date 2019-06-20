@@ -5,6 +5,9 @@ angular.module('southportDental')
     .run(function ($rootScope, AssetHandler) {
         $rootScope.slidePaths = (AssetHandler.getSlidePaths());
         $rootScope.slideStrings = (AssetHandler.getSlideStrings());
+
+        $rootScope.teamDetails = (AssetHandler.getTeamDetails());
+
     })
 
     .config(['$locationProvider', '$routeProvider',
