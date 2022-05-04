@@ -9,7 +9,7 @@
   "author": "jrholden",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.5",
+    "angular": "^1.8.3",
     "angular-loader": "^1.7.5",
     "angular-mocks": "^1.7.5",
     "angular-route": "^1.7.5",
